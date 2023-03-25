@@ -56,10 +56,11 @@
             }])
             .controller('CreateController', ['$scope', '$http','$location', function ($scope, $http, $location)
             {
-                $scope.order =
+                $scope.ticket =
                     {
                         ID : 0,
-                        title : '',
+                        title: '',
+                        actors: null,
                         description : '',
                         createdAt : '',
                         updatedAt :'',
