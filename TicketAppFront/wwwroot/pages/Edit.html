@@ -1,0 +1,32 @@
+﻿<div class="row">
+    <div class="col-md-4">
+        <div class="form-group">
+            <label for="id" class="control-label"></label>
+            <input ng-model="edit.id" disabled />
+        </div>
+        <div class="form-group">
+            <label for="customerName" class="control-label"></label>
+            <input ng-model="edit.customerName" placeholder="Customer Name" />
+        </div>
+        <div class="form-group">
+            <label for="customerName" class="control-label"></label>
+            <input ng-model="edit.pickUpAddress" placeholder="Pick Up Address" />
+        </div>
+        <div class="form-group">
+            <label for="customerName" class="control-label"></label>
+            <input ng-model="edit.destinationAddress" placeholder="Destination Address" />
+        </div>
+        <div class="form-group">
+            <label for="customerName" class="control-label"></label>
+            <input ng-model="edit.orderDate" type="text" placeholder="Order Date" />
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Save Edit" class="btn btn-block btn-success" ng-click="Edit()" />
+        
+            <input type="submit" value="Delete" class="btn btn-block btn-danger" ng-click="Delete()" />
+        </div>
+        <div class="form-group">
+            <a href="#!/">Go back</a>
+        </div>
+    </div>
+</div>

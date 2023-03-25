@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "4tzGjotoLCj7FIlkmKtdfwOLNflmg0mnc2m2IbgPLg2vrVdFeUJ6aEBX5rgEa2Q0oX8rXT43h6cU13Q8MXEODQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\acer\\source\\repos\\TicketAppFront\\TicketAppFront\\TicketAppFront.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\acer\\.nuget\\packages\\angularjs.core\\1.8.2\\angularjs.core.1.8.2.nupkg.sha512"
+  ],
+  "logs": []
+}
