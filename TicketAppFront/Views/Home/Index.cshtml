@@ -59,14 +59,15 @@
                 $scope.order =
                     {
                         ID : 0,
-                        customerName : '',
-                        pickUpAddress : '',
-                        destinationAddress : '',
-                        orderDate :'2012-06-18T10:34:09'
+                        title : '',
+                        description : '',
+                        createdAt : '',
+                        updatedAt :'',
+                        status: ''
                     };
-                $scope.AddTaxiOrder = function()
+                $scope.AddTicket = function()
                 {
-                    $http.post('https://localhost:44303/api/torders/', $scope.order)
+                    $http.post('https://localhost:44303/api/tickets/', $scope.ticket)
                         .then(function (res)
                         {
                             $location.path('/')
@@ -78,7 +79,7 @@
             {
                 $scope.details = [];
 
-                $http.get('https://localhost:44303/api/torders/' + $routeParams.orderId)
+                $http.get('https://localhost:44303/api/tickets/' + $routeParams.orderId)
                     .then(function (res)
                     {
                         $scope.details = res.data;
@@ -89,20 +90,20 @@
             {
                 $scope.edit = [];
 
-                $http.get('https://localhost:44303/api/torders/' + $routeParams.orderId)
+                $http.get('https://localhost:44303/api/tickets/' + $routeParams.orderId)
                     .then(function (res)
                     {
                         $scope.edit = res.data;
                     });
 
                 $scope.Edit = function () {
-                    $http.put('https://localhost:44303/api/torders/' + $routeParams.orderId, $scope.edit)
+                    $http.put('https://localhost:44303/api/tickets/' + $routeParams.orderId, $scope.edit)
                         .then(function (res) {
                             $location.path('/');
                         });
                 };
                 $scope.Delete = function () {
-                    $http.delete('https://localhost:44303/api/torders/' + $routeParams.orderId, $scope.edit)
+                    $http.delete('https://localhost:44303/api/tickets/' + $routeParams.orderId, $scope.edit)
                         .then(function (res) {
                             $location.path('/');
                         });
