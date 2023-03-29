@@ -40,9 +40,11 @@
                     });
 
             })
+          
             .controller('IndexController', ['$scope', '$http', function ($scope, $http)
             {
                 var config = {
+
                     headers: {
                         'Content-Type': 'application/json'
                     }
@@ -57,10 +59,10 @@
             .controller('CreateController', ['$scope', '$http','$location', function ($scope, $http, $location)
             {
                 $scope.ticket =
-                    {
-                        ID : 0,
+                {
+                        ID: 0,
                         title: '',
-                        actors: null,
+                        actors: 0,
                         description : '',
                         createdAt : '',
                         updatedAt :'',
@@ -68,7 +70,12 @@
                     };
                 $scope.AddTicket = function()
                 {
-                    $http.post('https://localhost:44303/api/tickets/', $scope.ticket)
+                    var config = {
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    };
+                    $http.post('https://localhost:44303/api/tickets/', config, $scope.ticket)
                         .then(function (res)
                         {
                             $location.path('/')
@@ -104,7 +111,7 @@
                         });
                 };
                 $scope.Delete = function () {
-                    $http.delete('https://localhost:44303/api/tickets/' + $routeParams.orderId, $scope.edit)
+                    $http.delete('https://localhost:44303/api/tickets/' + $routeParams.orderId, )
                         .then(function (res) {
                             $location.path('/');
                         });
